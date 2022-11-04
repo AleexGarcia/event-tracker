@@ -1,4 +1,3 @@
-import  { useState } from 'react';
 import style from './App.module.scss';
 import Card from './components/Card';
 import Formulario from './components/Formulario';
@@ -27,7 +26,7 @@ function App() {
   // ])
 
 
-  const [filtro, setFiltro] = useState<Date | null>()
+  // const [filtro, setFiltro] = useState<Date | null>()
 
   // const adicionarEvento = (evento: IEvento) => {
   //   evento.id = Math.round((new Date()).getTime() / 1000)
@@ -47,15 +46,15 @@ function App() {
   //   // setEventos([...eventos.filter(evento => evento.id !== id)])
   // }
 
-  const aplicarFiltro = (data: Date | null) => {
-    setFiltro(data)
-  }
+  // const aplicarFiltro = (data: Date | null) => {
+  //   setFiltro(data)
+  // }
 
-  // const filtrados = !filtro
-  //   ? eventos
-  //   : eventos.filter((evento) =>
-  //     filtro!.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10)
-  //   );
+  // // const filtrados = !filtro
+  // //   ? eventos
+  // //   : eventos.filter((evento) =>
+  // //     filtro!.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10)
+  // //   );
 
   return (
     <RecoilRoot>
@@ -67,7 +66,6 @@ function App() {
           <hr />
           <Card>
             <ListaDeEventos 
-            aoFiltroAplicado={aplicarFiltro} 
              />
           </Card>
         </div>
